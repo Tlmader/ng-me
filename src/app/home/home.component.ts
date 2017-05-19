@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
       {
         title: 'Programming',
         content: 'I study computer science at the University of New Orleans and develop software for GE Digital. My ' +
-        'experience comes from Java programming and Agile software projects. I also enjoy web development and recently ' +
-        'began studying AI programming.',
+        'experience comes from Java programming and Agile software projects. I also enjoy web development and ' +
+        'recently began studying AI programming.',
         linkLabel: 'Visit my GitHub profile!',
         linkTo: 'https://github.com/tlmader'
       },

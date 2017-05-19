@@ -1,9 +1,17 @@
-<md-card>
-  <h1>Hello, world!</h1>
-  <h3>My name is Ted. I live in New Orleans and build software!</h3>
-</md-card>
-<md-card *ngFor="let about of abouts">
-  <strong>{{about.title}}</strong>
+<md-card-title-group>
+  <md-card-title><h1>Hello, world!</h1></md-card-title>
+  <md-card-subtitle><h3>My name is Ted. I live in New Orleans and build software!</h3></md-card-subtitle>
+  <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
+</md-card-title-group>
+<md-card-content>
+  <p>
+    I study computer science and game development at the University of New Orleans and develop software for
+    GE Digital. PC gaming, electronic music, and men's fashion are my hobbies, and I enjoy discovering places
+    and learning new things.
+  </p>
+</md-card-content>
+<md-card-content *ngFor="let about of abouts">
+  <h2>{{about.title}}</h2>
   <p>{{about.content}}</p>
   <a href="{{about.linkTo}}">{{about.linkLabel}}</a>
-</md-card>
+</md-card-content>
