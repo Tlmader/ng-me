@@ -11,7 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { MusicComponent } from './music/music.component';
 import { PhotosComponent } from './photos/photos.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MdButtonModule, MdToolbarModule } from "@angular/material";
+import { MdButtonModule, MdToolbarModule, MdTabsModule } from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import { MdButtonModule, MdToolbarModule } from "@angular/material";
     AppRoutingModule,
     BrowserAnimationsModule,
     MdButtonModule,
+    MdTabsModule,
     MdToolbarModule
   ],
   providers: [],
