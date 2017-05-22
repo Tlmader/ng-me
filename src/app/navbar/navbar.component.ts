@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NavLink } from './navlink';
+import { Link } from '../shared/link';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +8,7 @@ import { NavLink } from './navlink';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  navLinks: NavLink[];
+  navLinks: Link[];
 
   constructor() {
   }
@@ -17,19 +17,19 @@ export class NavbarComponent implements OnInit {
     this.navLinks = [
       {
         label: 'Home',
-        route: 'home'
+        to: 'home'
       },
       {
         label: 'Projects',
-        route: 'projects'
+        to: 'projects'
       },
       {
         label: 'Photos',
-        route: 'photos'
+        to: 'photos'
       },
       {
         label: 'Music',
-        route: 'music'
+        to: 'music'
       }
     ];
   }
