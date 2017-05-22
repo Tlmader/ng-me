@@ -31,6 +31,6 @@ export class NavbarComponent implements OnInit {
         label: 'Music',
         route: 'music'
       }
-    ]
+    ];
   }
 }
