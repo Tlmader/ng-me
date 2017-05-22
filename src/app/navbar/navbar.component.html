@@ -1,6 +1,9 @@
-<md-tab-group>
-  <md-tab label="Home" routerLink="home"></md-tab>
-  <md-tab label="Projects" routerLink="projects"></md-tab>
-  <md-tab label="Photos" routerLink="photos"></md-tab>
-  <md-tab label="Music" routerLink="music"></md-tab>
-</md-tab-group>
+<nav md-tab-nav-bar>
+  <a md-tab-link
+     *ngFor="let link of navLinks"
+     [routerLink]="{{link.link}}"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive">
+    {{link.label}}
+  </a>
+</nav>
