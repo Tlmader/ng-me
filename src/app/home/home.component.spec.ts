@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MdButtonModule, MdCardModule } from '@angular/material';
+import { MockComponent } from 'ng2-mock-component';
 
 import { HomeComponent } from './home.component';
 
@@ -10,11 +11,11 @@ describe('HomeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MdButtonModule,
         MdCardModule,
       ],
       declarations: [
-        HomeComponent
+        HomeComponent,
+        MockComponent({ selector: 'app-content', inputs: [ 'content' ] })
       ]
     })
     .compileComponents();

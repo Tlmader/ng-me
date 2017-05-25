@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MdButtonModule, MdCardModule } from '@angular/material';
 
 import { ContentComponent } from './content.component';
 
@@ -8,6 +9,10 @@ describe('ContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MdButtonModule,
+        MdCardModule,
+      ],
       declarations: [ ContentComponent ]
     })
     .compileComponents();
@@ -16,6 +21,15 @@ describe('ContentComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ContentComponent);
     component = fixture.componentInstance;
+    component.content = {
+      title: 'Test Content',
+      description: 'This is the description.',
+      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      links: [{
+        label: 'Test Link',
+        to: 'https://github.com/tlmader'
+      }]
+    };
     fixture.detectChanges();
   });
 
