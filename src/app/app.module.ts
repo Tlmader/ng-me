@@ -14,6 +14,7 @@ import { MusicComponent } from './music/music.component';
 import { PhotosComponent } from './photos/photos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutComponent } from './shared/layout/layout.component';
+import { ContentComponent } from './shared/content/content.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LayoutComponent } from './shared/layout/layout.component';
     MusicComponent,
     PhotosComponent,
     NavbarComponent,
-    LayoutComponent
+    LayoutComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

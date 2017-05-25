@@ -1,0 +1,9 @@
+<md-card>
+  <md-card-subtitle>
+    <p>{{content.description}}</p>
+  </md-card-subtitle>
+  <img md-card-image *ngIf="content.image" src="{{content.image}}">
+  <md-card-actions>
+    <a *ngFor="let link of content.links" md-button href="{{link.to}}">{{link.label}}</a>
+  </md-card-actions>
+</md-card>
