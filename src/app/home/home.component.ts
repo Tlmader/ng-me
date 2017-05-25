@@ -7,12 +7,17 @@ import { About } from './about';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  intros: string[];
   abouts: About[];
 
   constructor() {
   }
 
   ngOnInit() {
+    this.intros = [
+      'My name is Ted Mader, and I am a full-time software engineer starting my career in New Orleans.',
+      'I guess you\'re here because you want to know more about me, right? I\'m not that great at talking about myself, but I\'ll do my best and add some pictures.'
+    ];
     this.abouts = [
       {
         title: 'Programming',
