@@ -7,11 +7,11 @@
     </md-card-title-group>
   </md-card>
   <md-card>
-    <md-card-content *ngFor="let intro of intros">
+    <md-card-content id="intro" *ngFor="let intro of intros">
       <p>{{intro}}</p>
     </md-card-content>
   </md-card>
-  <md-card *ngFor="let about of abouts">
+  <md-card id="about" *ngFor="let about of abouts">
     <md-card-subtitle>
       <p>{{about.description}}</p>
     </md-card-subtitle>
