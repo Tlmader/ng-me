@@ -1,6 +1,9 @@
+p {
+  line-height: 200%;
+}
+
 md-card-subtitle p {
   font-style: italic;
-  line-height: 200%;
 }
 
 .content-block {
