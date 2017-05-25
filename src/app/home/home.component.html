@@ -1,23 +1,21 @@
-<app-layout>
-  <md-card>
-    <md-card-title-group>
-      <md-card-title><h1>Hello, world!</h1></md-card-title>
-      <md-card-subtitle><h3>My name is Ted. I live in New Orleans and build software!</h3></md-card-subtitle>
-      <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
-    </md-card-title-group>
-  </md-card>
-  <md-card>
-    <md-card-content id="intro" *ngFor="let intro of intros">
-      <p>{{intro}}</p>
-    </md-card-content>
-  </md-card>
-  <md-card id="about" *ngFor="let about of abouts">
-    <md-card-subtitle>
-      <p>{{about.description}}</p>
-    </md-card-subtitle>
-    <img md-card-image *ngIf="about.image" src="{{about.image}}">
-    <md-card-actions>
-      <a *ngFor="let link of about.links" md-button href="{{link.to}}">{{link.label}}</a>
-    </md-card-actions>
-  </md-card>
-</app-layout>
+<md-card>
+  <md-card-title-group>
+    <md-card-title><h1>Hello, world!</h1></md-card-title>
+    <md-card-subtitle><h3>My name is Ted. I live in New Orleans and build software!</h3></md-card-subtitle>
+    <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
+  </md-card-title-group>
+</md-card>
+<md-card>
+  <md-card-content id="intro" *ngFor="let intro of intros">
+    <p>{{intro}}</p>
+  </md-card-content>
+</md-card>
+<md-card id="about" *ngFor="let about of abouts">
+  <md-card-subtitle>
+    <p>{{about.description}}</p>
+  </md-card-subtitle>
+  <img md-card-image *ngIf="about.image" src="{{about.image}}">
+  <md-card-actions>
+    <a *ngFor="let link of about.links" md-button href="{{link.to}}">{{link.label}}</a>
+  </md-card-actions>
+</md-card>

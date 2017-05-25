@@ -15,8 +15,7 @@ describe('HomeComponent', () => {
         MdCardModule,
       ],
       declarations: [
-        HomeComponent,
-        LayoutComponent
+        HomeComponent
       ]
     })
     .compileComponents();
