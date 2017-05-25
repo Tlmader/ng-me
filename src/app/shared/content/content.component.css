@@ -1,0 +1,11 @@
+p {
+  line-height: 200%;
+}
+
+md-card-subtitle p {
+  font-style: italic;
+}
+
+.content-block {
+  background-color: #DCDCDC;
+}

@@ -32,13 +32,13 @@ describe('HomeComponent', () => {
 
   it('should display the correct number of intros', async(() => {
     const element = fixture.nativeElement;
-    let abouts = element.querySelectorAll('#intro');
+    let abouts = element.querySelectorAll('.intro');
     expect(abouts.length).toBe(2);
   }));
 
   it('should display the correct number of abouts', async(() => {
     const element = fixture.nativeElement;
-    let abouts = element.querySelectorAll('#about');
+    let abouts = element.querySelectorAll('.about');
     expect(abouts.length).toBe(3);
   }));
 });
