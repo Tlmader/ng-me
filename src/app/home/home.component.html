@@ -10,7 +10,9 @@
     <md-card-content *ngFor="let intro of intros">{{intro}}</md-card-content>
   </md-card>
   <md-card *ngFor="let about of abouts">
-    <md-card-subtitle>{{about.content}}</md-card-subtitle>
+    <md-card-subtitle>
+      <p>{{about.content}}</p>
+    </md-card-subtitle>
     <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
     <md-card-actions *ngIf="about.link">
       <a md-button href="{{about.link.to}}">{{about.link.label}}</a>

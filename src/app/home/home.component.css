@@ -1,4 +1,5 @@
-md-card-content, md-card-subtitle {
+md-card-subtitle p {
+  font-style: italic;
   line-height: 200%;
 }
 
