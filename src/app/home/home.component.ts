@@ -15,14 +15,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.abouts = [
       {
-        title: null,
-        content: 'My name is Ted Mader, and I am a full-time software engineer starting my career in New Orleans\n\n' +
-        'I guess you\'re here because you want to know more about me, right? I\'m not that great at talking about ' +
-        'myself, but I\'ll do my best and add some pictures.',
-        photo: null,
-        link: null
-      },
-      {
         title: 'Programming',
         content: 'I studied computer science at the University of New Orleans and develop software for GE Digital. My ' +
         'experience comes from Java programming and Agile software projects. I also enjoy web development and ' +

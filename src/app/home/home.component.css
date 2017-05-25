@@ -1,0 +1,8 @@
+md-card-content, md-card-subtitle {
+  line-height: 200%;
+}
+
+.content-block {
+  color: #A9A9A9;
+  background-color: #DCDCDC;
+}

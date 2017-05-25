@@ -6,11 +6,17 @@
       <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
     </md-card-title-group>
   </md-card>
-  <md-card *ngFor="let about of abouts">
-    <md-card-title *ngIf="about.title">{{about.title}}</md-card-title>
+  <md-card>
     <md-card-content>
-      {{about.content}}
+      My name is Ted Mader, and I am a full-time software engineer starting my career in New Orleans.
     </md-card-content>
+    <md-card-content>
+      I guess you're here because you want to know more about me, right? I'm not that great at talking about myself, but I'll do my best and add some pictures.
+    </md-card-content>
+  </md-card>
+  <md-card *ngFor="let about of abouts">
+    <md-card-subtitle>{{about.content}}</md-card-subtitle>
+    <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
     <md-card-content *ngIf="about.link"><a href="{{about.link.to}}">{{about.link.label}}</a></md-card-content>
   </md-card>
 </app-layout>
