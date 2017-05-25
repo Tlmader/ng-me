@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { About } from './about';
+import { Content } from '../shared/content';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { About } from './about';
 })
 export class HomeComponent implements OnInit {
   intros: string[];
-  abouts: About[];
+  abouts: Content[];
 
   constructor() {
   }
@@ -20,25 +20,28 @@ export class HomeComponent implements OnInit {
     ];
     this.abouts = [
       {
-        content: 'I studied computer science at the University of New Orleans and develop software for GE Digital. My experience comes from Java programming and Agile software projects. I have spent time developing web applications using technologies like Spring, Angular, and Node. I also enjoy web development and recently began studying AI programming.',
+        title: null,
+        description: 'I studied computer science at the University of New Orleans and develop software for GE Digital. My experience comes from Java programming and Agile software projects. I have spent time developing web applications using technologies like Spring, Angular, and Node. I also enjoy web development and recently began studying AI programming.',
         image: null,
-        link: {
+        links: [{
           label: 'Visit my GitHub profile!',
           to: 'https://github.com/tlmader'
-        }
+        }]
       },
       {
-        content: 'I took game development courses and learned how to build small games with Unity, including a 3D action game with my game development class! I also had the opportunity to work on a project involving integrating virtual reality with a training simulation.',
+        title: null,
+        description: 'I took game development courses and learned how to build small games with Unity, including a 3D action game with my game development class! I also had the opportunity to work on a project involving integrating virtual reality with a training simulation.',
         image: null,
-        link: null
+        links: null
       },
       {
-        content: 'Of course, I still love playing video games. I enjoy building and exploring with friends in Terraria and Minecraft, the planning involved in a game of Sid Meier\'s Civilization, and slaying powerful bosses in Dark Souls. Stardew Valley has been a lot of fun recently. I am also a huge fan of stories told by indie titles like Undertale, Bastion, and Transistor.',
+        title: null,
+        description: 'Of course, I still love playing video games. I enjoy building and exploring with friends in Terraria and Minecraft, the planning involved in a game of Sid Meier\'s Civilization, and slaying powerful bosses in Dark Souls. Stardew Valley has been a lot of fun recently. I am also a huge fan of stories told by indie titles like Undertale, Bastion, and Transistor.',
         image: null,
-        link: {
+        links: [{
           label: 'Visit me on Steam!',
           to: 'http://steamcommunity.com/id/tlmader'
-        }
+        }]
       }
     ];
   }

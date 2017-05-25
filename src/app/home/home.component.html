@@ -11,11 +11,13 @@
   </md-card>
   <md-card *ngFor="let about of abouts">
     <md-card-subtitle>
-      <p>{{about.content}}</p>
+      <p>{{about.description}}</p>
     </md-card-subtitle>
     <img md-card-image *ngIf="about.image" src="{{about.image}}">
-    <md-card-actions *ngIf="about.link">
-      <a md-button href="{{about.link.to}}">{{about.link.label}}</a>
+    <md-card-actions>
+      <div *ngFor="let link of about.links">
+        <a md-button href="{{link.to}}">{{link.label}}</a>
+      </div>
     </md-card-actions>
   </md-card>
 </app-layout>
