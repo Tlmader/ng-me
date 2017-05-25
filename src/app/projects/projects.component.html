@@ -1,3 +1,15 @@
-<p>
-  projects works!
-</p>
+<md-card>
+  <md-card-title-group>
+    <md-card-title><h1>Projects</h1></md-card-title>
+    <md-card-subtitle><h3>Check out these fun things I've worked on!</h3></md-card-subtitle>
+  </md-card-title-group>
+</md-card>
+<md-card id="project" *ngFor="let project of projects">
+  <md-card-subtitle>
+    <p>{{project.description}}</p>
+  </md-card-subtitle>
+  <img md-card-image *ngIf="project.image" src="{{project.image}}">
+  <md-card-actions>
+    <a *ngFor="let link of project.links" md-button href="{{link.to}}">{{link.label}}</a>
+  </md-card-actions>
+</md-card>

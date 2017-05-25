@@ -1,8 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MdButtonModule, MdCardModule } from '@angular/material';
 
 import { HomeComponent } from './home.component';
-import { MdButtonModule, MdCardModule } from '@angular/material';
-import { LayoutComponent } from '../shared/layout/layout.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
