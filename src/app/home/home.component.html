@@ -6,18 +6,11 @@
       <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
     </md-card-title-group>
   </md-card>
-  <md-card>
-    <md-card-content>
-      I studied computer science at the University of New Orleans and build software for GE Digital. PC gaming,
-      electronic music, and men's fashion are my hobbies, and I enjoy discovering places
-      and learning new things.
-    </md-card-content>
-  </md-card>
   <md-card *ngFor="let about of abouts">
-    <md-card-title>{{about.title}}</md-card-title>
+    <md-card-title *ngIf="about.title">{{about.title}}</md-card-title>
     <md-card-content>
       {{about.content}}
     </md-card-content>
-    <md-card-content><a href="{{about.link.to}}">{{about.link.label}}</a></md-card-content>
+    <md-card-content *ngIf="about.link"><a href="{{about.link.to}}">{{about.link.label}}</a></md-card-content>
   </md-card>
 </app-layout>

@@ -22,4 +22,10 @@ describe('HomeComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display the correct number of abouts', async(() => {
+    const element = fixture.nativeElement;
+    let floors = element.querySelectorAll('.ge-menu__item');
+    expect(floors.length).toBe(2);
+  }));
 });
