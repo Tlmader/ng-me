@@ -2,6 +2,6 @@ import { Link } from '../shared/link';
 
 export class About {
   content: string;
-  photo: string;
+  image: string;
   link: Link;
 }

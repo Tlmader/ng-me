@@ -13,7 +13,7 @@
     <md-card-subtitle>
       <p>{{about.content}}</p>
     </md-card-subtitle>
-    <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    <img md-card-image *ngIf="about.image" src="{{about.image}}">
     <md-card-actions *ngIf="about.link">
       <a md-button href="{{about.link.to}}">{{about.link.label}}</a>
     </md-card-actions>
