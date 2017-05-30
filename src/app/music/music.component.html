@@ -5,10 +5,10 @@
   </md-card-title-group>
 </md-card>
 <md-card>
-  <md-list>
-    <h3 md-subheader>Playlists</h3>
-    <md-list-item class="playlist" *ngFor="let playlist of playlists">
+  <md-select placeholder="Playlists" [(ngModel)]="selectedPlaylist" name="playlist" [style.width]="'100%'">
+    <md-option *ngFor="let playlist of playlists" [value]="playlist">
       {{playlist.title}}
-    </md-list-item>
-  </md-list>
+    </md-option>
+  </md-select>
+  <div *ngIf="selectedPlaylist" [innerHTML]="safe(selectedPlaylist.player)"></div>
 </md-card>

@@ -6,7 +6,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
   MdButtonModule, MdCardModule, MdToolbarModule, MdTabsModule, MdGridListModule,
-  MdListModule
+  MdListModule, MdSelectModule
 } from "@angular/material";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,7 +39,7 @@ import { ContentComponent } from './shared/content/content.component';
     BrowserAnimationsModule,
     MdButtonModule,
     MdCardModule,
-    MdListModule,
+    MdSelectModule,
     MdTabsModule,
     MdToolbarModule
   ],

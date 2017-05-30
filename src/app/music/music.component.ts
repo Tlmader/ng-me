@@ -8,6 +8,7 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 })
 export class MusicComponent implements OnInit {
   playlists: Playlist[];
+  selectedPlaylist: Playlist;
 
   constructor(private sanitizer: DomSanitizer) { }
 
@@ -27,7 +28,7 @@ export class MusicComponent implements OnInit {
       },
       {
         title: 'My 2016 – Spotify',
-        player: '<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Atlmader%3Aplaylist%3A3QGFzhkCFDhZhisEDYQvPW" width="300" height="380" frameBorder="0" allowTransparency="true"></iframe>',
+        player: '<iframe src="https://open.spotify.com/embed/user/tlmader/playlist/3QGFzhkCFDhZhisEDYQvPW" width="100%" height="380" frameBorder="0" allowTransparency="true"></iframe>',
       },
     ];
   }
