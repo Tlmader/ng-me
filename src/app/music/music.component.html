@@ -9,5 +9,7 @@
   <md-card-actions>
     <button md-button (click)="onClick(playlist)" *ngFor="let playlist of playlists">{{playlist.title}}</button>
   </md-card-actions>
-  <div *ngIf="selectedPlaylist" [innerHTML]="safe(selectedPlaylist.player)"></div>
+  <md-card-content>
+    <iframe *ngIf="selected" [src]="playlistURL()" width="100%" height="480" scrolling="no" frameBorder="no" allowfullscreen></iframe>
+  </md-card-content>
 </md-card>

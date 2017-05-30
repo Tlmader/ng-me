@@ -8,7 +8,7 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 })
 export class MusicComponent implements OnInit {
   playlists: Playlist[];
-  selectedPlaylist: Playlist;
+  selected: Playlist;
 
   constructor(private sanitizer: DomSanitizer) { }
 
@@ -16,33 +16,33 @@ export class MusicComponent implements OnInit {
     this.playlists = [
       {
         title: 'My 2017 – SoundCloud',
-        player: '<iframe width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/297172538&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>'
+        url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/297172538&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'
       },
       {
         title: 'My 2016 – SoundCloud',
-        player: '<iframe width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/288248586&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
+        url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/288248586&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
       },
       {
         title: 'Sets & Mixes – SoundCloud',
-        player: '<iframe width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/116495333&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
+        url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/116495333&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
       },
       {
         title: 'My 2016 – Spotify',
-        player: '<iframe src="https://open.spotify.com/embed/user/tlmader/playlist/3QGFzhkCFDhZhisEDYQvPW" width="100%" height="380" frameBorder="0" allowTransparency="true"></iframe>',
+        url: 'https://open.spotify.com/embed/user/tlmader/playlist/3QGFzhkCFDhZhisEDYQvPW',
       },
     ];
   }
 
   onClick(playlist) {
-    this.selectedPlaylist = playlist;
+    this.selected = playlist;
   }
 
-  safe(html) : SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(html);
+  playlistURL() : SafeHtml {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(this.selected.url);
   }
 }
 
 class Playlist {
   title: string;
-  player: string;
+  url: string;
 }
