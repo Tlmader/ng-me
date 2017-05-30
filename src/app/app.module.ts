@@ -15,6 +15,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { ContentComponent } from './shared/content/content.component';
+import { InstagramService } from './photos/instagram.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ContentComponent } from './shared/content/content.component';
     MdTabsModule,
     MdToolbarModule
   ],
-  providers: [],
+  providers: [InstagramService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
