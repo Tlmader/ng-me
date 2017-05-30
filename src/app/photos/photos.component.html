@@ -1,13 +1,17 @@
 <md-card>
   <md-card-title-group>
     <md-card-title><h1>Photos</h1></md-card-title>
-    <md-card-subtitle><h3>View my recent photos!</h3></md-card-subtitle>
+    <md-card-subtitle><h3>Friends, food pics, and adventures!</h3></md-card-subtitle>
     <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
   </md-card-title-group>
 </md-card>
-<md-card *ngIf="media" fxLayout="row" fxLayout="center center" fxLayoutGap="2.75%">
-  <md-card-subtitle fxFlex="100">These were retrieved from my Instagram profile.</md-card-subtitle>
-  <md-card-content fxFlex="30" *ngFor="let item of media.items">
-    <img src="{{item.images.standard_resolution.url}}"/>
-  </md-card-content>
+<md-card>
+  <div *ngIf="media" fxLayout="row wrap" fxLayoutAlign="center">
+    <md-card-subtitle fxFlex="100">
+      <p>The latest photos retrieved from my <a href="https://www.instagram.com/tlmader/">Instagram</a> profile.</p>
+    </md-card-subtitle>
+    <md-card class="image" fxFlex="31.3" *ngFor="let item of media.items">
+      <img src="{{item.images.standard_resolution.url}}"/>
+    </md-card>
+  </div>
 </md-card>
