@@ -1,12 +1,14 @@
 <md-card>
   <md-card-title-group>
     <md-card-title><h1>Music</h1></md-card-title>
-    <md-card-subtitle><h3>Playlists with my favorite sounds!</h3></md-card-subtitle>
+    <md-card-subtitle><h3>My favorite sounds!</h3></md-card-subtitle>
   </md-card-title-group>
 </md-card>
-<md-card class="playlist" *ngFor="let playlist of playlists">
-  <md-card-subtitle>{{playlist.title}}</md-card-subtitle>
-  <md-card-content>
-    <div [innerHTML]="safe(playlist.player)"></div>
-  </md-card-content>
+<md-card>
+  <md-list>
+    <h3 md-subheader>Playlists</h3>
+    <md-list-item class="playlist" *ngFor="let playlist of playlists">
+      {{playlist.title}}
+    </md-list-item>
+  </md-list>
 </md-card>

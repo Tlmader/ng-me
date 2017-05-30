@@ -4,7 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MdButtonModule,MdCardModule, MdToolbarModule, MdTabsModule, MdGridListModule } from "@angular/material";
+import {
+  MdButtonModule, MdCardModule, MdToolbarModule, MdTabsModule, MdGridListModule,
+  MdListModule
+} from "@angular/material";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +39,7 @@ import { ContentComponent } from './shared/content/content.component';
     BrowserAnimationsModule,
     MdButtonModule,
     MdCardModule,
-    MdGridListModule,
+    MdListModule,
     MdTabsModule,
     MdToolbarModule
   ],
