@@ -39,7 +39,6 @@ import { ContentComponent } from './shared/content/content.component';
     BrowserAnimationsModule,
     MdButtonModule,
     MdCardModule,
-    MdSelectModule,
     MdTabsModule,
     MdToolbarModule
   ],

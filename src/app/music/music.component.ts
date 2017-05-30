@@ -33,7 +33,11 @@ export class MusicComponent implements OnInit {
     ];
   }
 
-  public safe(html) : SafeHtml {
+  onClick(playlist) {
+    this.selectedPlaylist = playlist;
+  }
+
+  safe(html) : SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 }
