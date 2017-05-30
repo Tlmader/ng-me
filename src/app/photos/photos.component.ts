@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { InstagramService } from './instagram.service';
-import { Photo } from './photo';
 
 @Component({
   selector: 'app-photos',
@@ -10,7 +9,7 @@ import { Photo } from './photo';
 })
 export class PhotosComponent implements OnInit {
   errorMessage: string;
-  photos: Photo[];
+  media: Object;
 
   constructor(private instagramService: InstagramService) { }
 
@@ -21,8 +20,9 @@ export class PhotosComponent implements OnInit {
   getMedia() {
     this.instagramService.getMedia()
       .subscribe(
-        photos => {
-          this.photos = photos;
+        media => {
+          this.media = media;
+          console.log(media);
         },
         error => this.errorMessage = <any>error);
   }

@@ -2,14 +2,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Http, Response } from '@angular/http';
 
-import { Photo } from './photo';
-
 @Injectable()
 export class InstagramService {
 
   constructor (private http: Http) {}
 
-  getMedia(): Observable<Photo[]> {
+  getMedia(): Observable<Object> {
     return this.http.get('https://www.instagram.com/tlmader/media/')
       .map(res => res.json())
       .catch(this.handleError);
