@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Jsonp, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class InstagramService {
 
-  constructor (private http: Http) {}
+  constructor (private jsonp: Jsonp) {}
 
   getMedia(): Observable<Object> {
-    return this.http.get('https://www.instagram.com/tlmader/media/')
-      .map(res => res.json())
+    return this.jsonp.request('https://www.instagram.com/tlmader/media?prefix=JSONP_CALLBACK')
+      .map(res => res.json().results.map(item => {
+        return {};
+      }))
       .catch(this.handleError);
   }
 
