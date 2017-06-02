@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       {
         title: null,
         description: 'I studied computer science at the University of New Orleans and develop software for GE Digital. My experience comes from Java programming and Agile software projects. I have spent time developing web applications using technologies like Spring, Angular, and Node. I also enjoy web development and recently began studying AI programming.',
-        image: 'https://68.media.tumblr.com/60d46e38942f3646c0b8c6499aa698bb/tumblr_o9r9meQec71vzv8jxo1_1280.png',
+        image: 'assets/home/programming.png',
         links: [{
           label: 'Visit my GitHub profile!',
           to: 'https://github.com/tlmader'
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       {
         title: null,
         description: 'I took game development courses and learned how to build small games with Unity, including a 3D action game with my game development class! I also had the opportunity to work on a project involving integrating virtual reality with a training simulation.',
-        image: 'assets/home2.png',
+        image: 'assets/home/game-dev.png',
         links: [{
           label: 'Game Projects',
           to: 'projects'
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
       {
         title: null,
         description: 'Of course, I still love playing video games. I enjoy building and exploring with friends in Terraria and Minecraft, the planning involved in a game of Sid Meier\'s Civilization, and slaying powerful bosses in Dark Souls. Stardew Valley has been a lot of fun recently. I am also a huge fan of stories told by indie titles like Undertale, Bastion, and Transistor.',
-        image: 'https://steamuserimages-a.akamaihd.net/ugc/771652080661059517/58306D59CE0117F1BC965179CF8C1C1B6B73C98E/',
+        image: 'assets/home/terraria.jpg',
         links: [{
           label: 'Visit me on Steam!',
           to: 'http://steamcommunity.com/id/tlmader'

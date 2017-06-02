@@ -30,7 +30,7 @@ export class ProjectsComponent implements OnInit {
         title: 'Honest Abe',
         description: 'A group project by the UNO Advanced Game Development class of Spring 2016: a 2D beat \'em up built ' +
         'with Unity!',
-        image: null,
+        image: 'assets/projects/honest-abe.png',
         links: [
           {
             label: 'Windows desktop 64-bit',
@@ -53,7 +53,7 @@ export class ProjectsComponent implements OnInit {
       {
         title: 'Theodoric',
         description: 'A 2D top-down action RPG built with the Phaser HTML5 game framework.',
-        image: null,
+        image: 'assets/projects/theodoric.jpg',
         links: [
           {
             label: 'Play in browser!',
