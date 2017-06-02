@@ -1,5 +1,8 @@
 <md-card>
-  <md-card-subtitle>
+  <md-card-title *ngIf="content.title">
+    <p>{{content.title}}</p>
+  </md-card-title>
+  <md-card-subtitle *ngIf="content.description">
     <p>{{content.description}}</p>
   </md-card-subtitle>
   <img md-card-image *ngIf="content.image" src="{{content.image}}">
