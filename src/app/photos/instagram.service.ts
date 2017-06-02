@@ -8,10 +8,8 @@ export class InstagramService {
   constructor (private jsonp: Jsonp) {}
 
   getMedia(): Observable<Object> {
-    return this.jsonp.request('https://www.instagram.com/tlmader/media?prefix=JSONP_CALLBACK')
-      .map(res => res.json().results.map(item => {
-        return {};
-      }))
+    return this.jsonp.request('https://json2jsonp.com/?url=' + encodeURIComponent('https://www.instagram.com/tlmader/media/') + '&callback=JSONP_CALLBACK')
+      .map(res => res.json())
       .catch(this.handleError);
   }
 
