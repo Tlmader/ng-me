@@ -1,10 +1,7 @@
-<md-card>
-  <md-card-title-group>
-    <md-card-title><h1>Photos</h1></md-card-title>
-    <md-card-subtitle><h3>Friends, food pics, and adventures!</h3></md-card-subtitle>
-    <img md-card-md-image src="http://i.imgur.com/mnsLcG1.jpg">
-  </md-card-title-group>
-</md-card>
+<app-jumbotron [title]="'Photos'"
+               [subtitle]="'Friends, food pics, and adventures!'"
+               [image]="'http://i.imgur.com/mnsLcG1.jpg'">
+</app-jumbotron>
 <md-card>
   <div *ngIf="media" fxLayout="row wrap" fxLayoutAlign="center">
     <md-card-subtitle fxFlex="100">

@@ -1,7 +1,5 @@
-<md-card>
-  <md-card-title-group>
-    <md-card-title><h1>Projects</h1></md-card-title>
-    <md-card-subtitle><h3>Check out these fun things I've worked on!</h3></md-card-subtitle>
-  </md-card-title-group>
-</md-card>
+<app-jumbotron [title]="'Projects'"
+               [subtitle]="'Check out these fun things I\'ve worked on!'"
+               [image]="'http://i.imgur.com/mnsLcG1.jpg'">
+</app-jumbotron>
 <app-content id="project" *ngFor="let project of projects" [content]="project"></app-content>

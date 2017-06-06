@@ -16,6 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { ContentComponent } from './shared/content/content.component';
 import { InstagramService } from './photos/instagram.service';
+import { JumbotronComponent } from './shared/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { InstagramService } from './photos/instagram.service';
     PhotosComponent,
     NavbarComponent,
     LayoutComponent,
-    ContentComponent
+    ContentComponent,
+    JumbotronComponent
   ],
   imports: [
     BrowserModule,
