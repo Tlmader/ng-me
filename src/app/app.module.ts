@@ -17,6 +17,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { ContentComponent } from './shared/content/content.component';
 import { InstagramService } from './photos/instagram.service';
 import { JumbotronComponent } from './shared/jumbotron/jumbotron.component';
+import { TheodoricComponent } from './projects/theodoric/theodoric.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { JumbotronComponent } from './shared/jumbotron/jumbotron.component';
     NavbarComponent,
     LayoutComponent,
     ContentComponent,
-    JumbotronComponent
+    JumbotronComponent,
+    TheodoricComponent
   ],
   imports: [
     BrowserModule,
