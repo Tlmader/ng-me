@@ -57,7 +57,7 @@ export class ProjectsComponent implements OnInit {
         links: [
           {
             label: 'Play in browser!',
-            to: 'http://tlmader.github.io/#/theodoric'
+            to: 'projects/theodoric'
           },
           {
             label: 'Download',

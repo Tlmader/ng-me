@@ -36,6 +36,9 @@ export class HomeComponent implements OnInit {
           label: 'Game Projects',
           to: 'projects'
         }, {
+          label: 'Play Theodoric in Browser!',
+          to: 'projects/theodoric'
+        }, {
           label: 'Campus News Article: UNO Game Dev',
           to: 'http://www.uno.edu/campus-news/2016/Game-On-UNO-Video-Game-Development-Concentration-Simulates-Real-World-Experience.aspx'
         }
