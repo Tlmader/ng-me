@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdToolbarModule, MdTabsModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdToolbarModule, MdTabsModule, MdListModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +42,7 @@ import { TheodoricComponent } from './projects/theodoric/theodoric.component';
     BrowserAnimationsModule,
     MdButtonModule,
     MdCardModule,
+    MdListModule,
     MdTabsModule,
     MdToolbarModule
   ],

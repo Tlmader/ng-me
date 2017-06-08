@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Content } from '../../shared/content';
 
 @Component({
   selector: 'app-theodoric',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./theodoric.component.css']
 })
 export class TheodoricComponent implements OnInit {
+  readmes: Content[];
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
