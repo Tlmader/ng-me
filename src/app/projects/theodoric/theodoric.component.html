@@ -10,16 +10,11 @@
   </md-card-subtitle>
   <md-card-content>
     <md-list>
-      <md-divider></md-divider>
-      <h2 md-subheader>Controls</h2>
-      <md-list-item>WASD - Move</md-list-item>
-      <md-list-item>Left Mouse Button - Hold down to attack</md-list-item>
-      <md-list-item>Spacebar - Cast spell</md-list-item>
-      <md-divider></md-divider>
-      <h2 md-subheader>Objectives</h2>
-      <md-list-item>Gather gold</md-list-item>
-      <md-list-item>Slay monsters</md-list-item>
-      <md-list-item>Survive!</md-list-item>
+      <div *ngFor="let readme of readmes">
+        <md-divider></md-divider>
+        <h2 md-subheader>{{readme.header}}</h2>
+        <md-list-item *ngFor="let item of readme.items">{{item}}</md-list-item>
+      </div>
     </md-list>
   </md-card-content>
 </md-card>

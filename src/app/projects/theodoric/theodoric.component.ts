@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Content } from '../../shared/content';
 
 @Component({
   selector: 'app-theodoric',
@@ -7,10 +6,34 @@ import { Content } from '../../shared/content';
   styleUrls: ['./theodoric.component.css']
 })
 export class TheodoricComponent implements OnInit {
-  readmes: Content[];
+  readmes: Readme[];
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.readmes = [
+      {
+        header: 'Controls',
+        items: [
+          'WASD - Move',
+          'Left Mouse Button - Hold down to attack',
+          'Spacebar - Cast spell'
+        ]
+      },
+      {
+        header: 'Objectives',
+        items: [
+          'Gather gold',
+          'Slay monsters',
+          'Survive!'
+        ]
+      }
+    ]
+  }
 
+}
+
+class Readme {
+  header: string;
+  items: string[];
 }

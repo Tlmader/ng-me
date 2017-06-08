@@ -14,6 +14,25 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.projects = [
       {
+        title: 'Theodoric',
+        description: 'A 2D top-down action RPG built with the Phaser HTML5 game framework.',
+        image: 'assets/projects/theodoric.jpg',
+        links: [
+          {
+            label: 'Play in browser!',
+            to: 'projects/theodoric'
+          },
+          {
+            label: 'Download',
+            to: 'https://spaces.hightail.com/space/GGXk0'
+          },
+          {
+            label: 'Source',
+            to: 'https://github.com/Tlmader/theodoric'
+          }
+        ]
+      },
+      {
         title: 'Chess Bot',
         description: 'This project provides a model of the state space of chess and a simple chess-playing bot that ' +
         'explores that space efficiently and decides what moves to make to defeat other bots. This uses a chess ' +
@@ -47,25 +66,6 @@ export class ProjectsComponent implements OnInit {
           {
             label: 'Source',
             to: 'https://github.com/Tlmader/honest-abe'
-          }
-        ]
-      },
-      {
-        title: 'Theodoric',
-        description: 'A 2D top-down action RPG built with the Phaser HTML5 game framework.',
-        image: 'assets/projects/theodoric.jpg',
-        links: [
-          {
-            label: 'Play in browser!',
-            to: 'projects/theodoric'
-          },
-          {
-            label: 'Download',
-            to: 'https://spaces.hightail.com/space/GGXk0'
-          },
-          {
-            label: 'Source',
-            to: 'https://github.com/Tlmader/theodoric'
           }
         ]
       },
