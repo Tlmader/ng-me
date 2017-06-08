@@ -24,8 +24,12 @@ export class HomeComponent implements OnInit {
         description: 'I studied computer science at the University of New Orleans and develop software for GE Digital. My experience comes from Java programming and Agile software projects. I have spent time developing web applications using technologies like Spring, Angular, and Node. I also enjoy web development and recently began studying AI programming.',
         image: 'assets/home/programming.png',
         links: [{
-          label: 'Visit my GitHub profile!',
+          label: 'GitHub',
           to: 'https://github.com/tlmader'
+        },
+        {
+          label: 'LinkedIn',
+          to: 'https://www.linkedin.com/in/tlmader/'
         }]
       },
       {
