@@ -1,13 +1,16 @@
-<app-jumbotron [title]="'Music'"
-               [subtitle]="'My favorite sounds!'"
-               [image]="'http://i.imgur.com/mnsLcG1.jpg'">
-</app-jumbotron>
-<md-card>
-  <md-card-subtitle>Select a playlist below to load a player.</md-card-subtitle>
-  <md-card-actions>
-    <button md-button (click)="onClick(playlist)" *ngFor="let playlist of playlists">{{playlist.title}}</button>
-  </md-card-actions>
-  <md-card-content>
-    <iframe *ngIf="selected" [src]="playlistURL()" width="100%" height="480" scrolling="no" frameBorder="no" allowfullscreen></iframe>
-  </md-card-content>
-</md-card>
+<div fxFlex fxLayout="column">
+  <app-jumbotron fxFlex
+                 [title]="'Music'"
+                 [subtitle]="'My favorite sounds!'"
+                 [image]="'http://i.imgur.com/mnsLcG1.jpg'">
+  </app-jumbotron>
+  <md-card fxFlex>
+    <md-card-subtitle>Select a playlist below to load a player.</md-card-subtitle>
+    <md-card-actions>
+      <button md-button (click)="onClick(playlist)" *ngFor="let playlist of playlists">{{playlist.title}}</button>
+    </md-card-actions>
+    <md-card-content>
+      <iframe *ngIf="selected" [src]="playlistURL()" align="middle" width="100%" height="480" scrolling="no" frameBorder="no" allowfullscreen></iframe>
+    </md-card-content>
+  </md-card>
+</div>

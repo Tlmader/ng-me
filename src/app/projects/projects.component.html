@@ -1,5 +1,12 @@
-<app-jumbotron [title]="'Projects'"
-               [subtitle]="'Check out these fun things I\'ve worked on!'"
-               [image]="'http://i.imgur.com/mnsLcG1.jpg'">
-</app-jumbotron>
-<app-content id="project" *ngFor="let project of projects" [content]="project"></app-content>
+<div fxFlex fxLayout="column">
+  <app-jumbotron fxFlex
+                 [title]="'Projects'"
+                 [subtitle]="'Check out these fun things I\'ve worked on!'"
+                 [image]="'http://i.imgur.com/mnsLcG1.jpg'">
+  </app-jumbotron>
+  <app-content id="project"
+               fxFlex
+               *ngFor="let project of projects"
+               [content]="project">
+  </app-content>
+</div>

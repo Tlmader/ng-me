@@ -9,3 +9,8 @@ md-card-subtitle p {
 .content-block {
   background-color: #DCDCDC;
 }
+
+.mat-card-image {
+  align-self: center;
+  max-width: 75vh;
+}

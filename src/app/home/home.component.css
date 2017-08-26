@@ -1,3 +1,9 @@
+/* Makes host element a flex container */
+:host {
+  display: flex;
+  flex: 1;
+}
+
 .intro {
   line-height: 200%;
 }

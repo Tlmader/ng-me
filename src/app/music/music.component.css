@@ -1,0 +1,11 @@
+/*Makes host element a flex container */
+:host {
+  display: flex;
+  flex: 1;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 75vh;
+}

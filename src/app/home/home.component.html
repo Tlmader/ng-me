@@ -1,10 +1,13 @@
-<app-jumbotron [title]="'Hello, world!'"
-               [subtitle]="'My name is Ted. I live in New Orleans and build software!'"
-               [image]="'http://i.imgur.com/mnsLcG1.jpg'">
-</app-jumbotron>
-<md-card>
-  <md-card-content class="intro" *ngFor="let intro of intros">
-    <p>{{intro}}</p>
-  </md-card-content>
-</md-card>
-<app-content class="about" *ngFor="let about of abouts" [content]="about"></app-content>
+<div fxFlex fxLayout="column">
+  <app-jumbotron fxFlex
+                 [title]="'tlmader.github.io'"
+                 [subtitle]="'My name is Ted. I live in New Orleans and build software!'"
+                 [image]="'http://i.imgur.com/mnsLcG1.jpg'">
+  </app-jumbotron>
+  <md-card fxFlex>
+    <md-card-content class="intro" *ngFor="let intro of intros">
+      <p>{{intro}}</p>
+    </md-card-content>
+  </md-card>
+  <app-content class="about" *ngFor="let about of abouts" [content]="about"></app-content>
+</div>

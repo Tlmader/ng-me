@@ -1,19 +1,16 @@
-<app-jumbotron [title]="'Photos'"
-               [subtitle]="'Friends, food pics, and adventures!'"
-               [image]="'http://i.imgur.com/mnsLcG1.jpg'">
-</app-jumbotron>
-<md-card>
-  <div *ngIf="media; else loading" fxLayout="row wrap" fxLayoutAlign="center">
-    <md-card-subtitle fxFlex="100">
-      <p>The latest photos retrieved from my <a href="https://www.instagram.com/tlmader/">Instagram</a> profile.</p>
-    </md-card-subtitle>
-    <md-card class="image" fxFlex="31.3" *ngFor="let item of media.items">
-      <img src="{{item.images.standard_resolution.url}}"/>
+<div fxFlex fxLayout="column">
+  <app-jumbotron fxFlex
+                 [title]="'Photos'"
+                 [subtitle]="'The latest photos retrieved from my Instagram profile.'"
+                 [image]="'http://i.imgur.com/mnsLcG1.jpg'">
+  </app-jumbotron>
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
+  <div fxFlex fxLayout="row" fxLayoutWrap *ngIf="media; else loading">
+    <md-card fxFlex="33.3333%"
+             *ngFor="let item of media.items">
+      <img fxFlex src="{{item.images.standard_resolution.url}}"/>
     </md-card>
   </div>
-  <ng-template #loading>
-    <md-card-subtitle>
-      <p>Loading...</p>
-    </md-card-subtitle>
-  </ng-template>
-</md-card>
+</div>
